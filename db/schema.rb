@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140726032359) do
+ActiveRecord::Schema.define(version: 20140726043120) do
 
   create_table "doctors", force: true do |t|
     t.string   "first_name"
@@ -26,6 +26,18 @@ ActiveRecord::Schema.define(version: 20140726032359) do
     t.datetime "updated_at"
   end
 
+  create_table "insurance_companies", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  create_table "insurances", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "patients", force: true do |t|
     t.string   "name"
     t.integer  "phone_number"
@@ -35,6 +47,24 @@ ActiveRecord::Schema.define(version: 20140726032359) do
     t.date     "date_of_birth"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "rentals", force: true do |t|
+    t.date     "surgery_date"
+    t.date     "discharge_date"
+    t.date     "set_up_date"
+    t.date     "pick_up_date"
+    t.string   "face_sheet"
+    t.string   "medicare"
+    t.string   "rx"
+    t.float    "payment"
+    t.boolean  "leg_right"
+    t.boolean  "leg_left"
+    t.integer  "diagnosis_id"
+    t.string   "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
 end

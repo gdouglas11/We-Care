@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  surgery_date: 2014-07-25
+  discharge_date: 2014-07-25
+  set_up_date: 2014-07-25
+  pick_up_date: 2014-07-25
+  face_sheet: MyString
+  medicare: MyString
+  rx: MyString
+  payment: 1.5
+  leg_right: false
+  leg_left: false
+  diagnosis_id: 1
+  notes: MyString
+
+two:
+  surgery_date: 2014-07-25
+  discharge_date: 2014-07-25
+  set_up_date: 2014-07-25
+  pick_up_date: 2014-07-25
+  face_sheet: MyString
+  medicare: MyString
+  rx: MyString
+  payment: 1.5
+  leg_right: false
+  leg_left: false
+  diagnosis_id: 1
+  notes: MyString
