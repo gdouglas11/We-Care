@@ -30,5 +30,25 @@
   <%= @patient.date_of_birth %>
 </p>
 
+<table>
+
+<% @patient.rentals.each do |rental| %>
+  <tr><td><%= rental.updated_at %></td>
+      <td><%= rental.surgery_date %></td>
+      <td><%= rental.discharge_date %></td>
+      <td><%= rental.set_up_date %></td>
+      <td><%= rental.pick_up_date %></td>
+      <td><%= rental.face_sheet %></td>
+      <td><%= rental.medicare %></td>
+      <td><%= rental.rx %></td>
+      <td><%= rental.payment %></td>
+      <td><%= rental.left_leg %></td>
+      <td><%= rental.right_leg %></td>
+      <td><%= rental.diagnosis_id %></td>
+      <td><%= rental.notes %></td>
+</tr>
+<% end %>
+</table>
+
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
